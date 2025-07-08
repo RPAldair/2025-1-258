@@ -16,7 +16,7 @@ Profesora: Nérida Isabel Manrique Tunque
 2. [Integrantes del grupo](#grupo-de-trabajo)
 3. [Descripción del dataset](#3-descripción-del-conjunto-de-datos)
 4. [Conclusiones](#4-conclusiones-clave)  
-5. [icencia](#licencia)
+5. [Licencia](#licencia)
 
 ## 1. Objetivo del proyecto
 
