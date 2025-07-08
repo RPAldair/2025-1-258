@@ -12,10 +12,11 @@ Profesora: Nérida Isabel Manrique Tunque
 
 # Metodología CRISP-DM: Tendencias de las estadísticas de videos de YouTube
 ## Índice
-1. [Objetivo del proyecto](#objetivo-del-proyecto)  
-2. [Descripción del dataset](#descripción-del-dataset)
-3. [Conclusiones clave](#conclusiones-clave)  
-4. [icencia](#licencia)
+1. [Objetivo del proyecto](#objetivo-del-proyecto)
+2. [Integrantes del grupo](#grupo-de-trabajo)
+3. [Descripción del dataset](#3-descripción-del-conjunto-de-datos)
+4. [Conclusiones](#4-conclusiones-clave)  
+5. [icencia](#licencia)
 
 ## 1. Objetivo del proyecto
 
@@ -23,7 +24,7 @@ Analizar un conjunto de datos de videos en tendencia de YouTube en Corea del Sur
 
 
 ---
-### Grupo de trabajo:
+### 2. Grupo de trabajo:
 
 Alzamora Gonzales Leonel         -     U20231c427@upc.edu.pe(Business Project Sponsor)
 
@@ -34,11 +35,11 @@ Avalos Sánchez, César Gabriel    -     U202310307@upc.edu.pe(Data Scientist)
 Rivas Pinto, Piero Aldair        -     U202122405@upc.edu.pe(Data Engineer)
 
 ---
-## 2. Descripción del dataset
+## 3. Descripción del conjunto de datos
 
-El dataset reúne información detallada sobre reservas de hotel, incluyendo datos del cliente, categoría de habitación, fechas de ingreso, duración de la estancia y otros elementos clave de cada transacción. Cada fila corresponde a una reserva individual e incluye múltiples atributos que permiten analizar los factores que afectan la demanda en el sector hotelero.
 
-Los datos utilizados, son una versión modificada para el proyecto, tienen como base el conjunto de datos proviene del portal Kaggle e incluye videos en tendencia en Corea del Sur durante 2021. Contiene variables como:
+
+Los datos utilizados, son una versión modificada para el proyecto, tienen como base el conjunto de datos proviene del portal Kaggle e incluye videos en tendencia en Corea del Sur durante 2021. El dataset reúne información detallada sobre estadísticas de videos en tendencia en Corea del Sur durante 2021 como:
 
 - `video_id`, `title`, `channel_title`
 - Métricas de interacción: `views`, `likes`, `dislikes`, `comment_count`
@@ -47,21 +48,20 @@ Los datos utilizados, son una versión modificada para el proyecto, tienen como 
 - Variables categóricas (`category_id`, `category_name`)
 - Indicadores de estado (`comments_disabled`, `ratings_disabled`, etc.)
 
-[Diccionario de Datos]
+[Ver diccionario de datos (PDF)](./data/Diccionario%20de%20Datos.pdf)
 
-## 3. Conclusiones clave
+## 4. Conclusiones
 
-El análisis de datos de YouTube en Corea del Sur permitió identificar categorías, canales y variables que influyen en el rendimiento y viralización de los videos. Las categorías más frecuentes en tendencias fueron Entertainment y Music, aunque Education presentó una proporción positiva superior en términos de interacción (likes / dislikes).
+El modelo de Árbol de Regresión permitió predecir con alta precisión la cantidad de vistas que puede alcanzar un video en YouTube dentro del contexto de Corea del Sur, alcanzando un R² de 0.992 en el conjunto de prueba.
 
-Se creó un pipeline de preparación de datos robusto que incluyó detección y tratamiento de outliers, imputación de valores faltantes, normalización y codificación de variables categóricas. Esto permitió trabajar con un dataset limpio, estructurado y apto para modelado.
+Las variables que más influyeron en las predicciones fueron dislikes, comment_ratio y comment_count, lo que sugiere que la participación del público (en forma de comentarios o reacciones) tiene un fuerte impacto en la visibilidad de un video.
 
-A partir del análisis exploratorio y el tratamiento de datos, se identificaron insights clave, como el hecho de que los videos más vistos no siempre coinciden con los más comentados, y que los canales más frecuentes en tendencia no necesariamente son los más valorados por los usuarios.
+La diferencia mínima entre el R² del entrenamiento (0.997) y el de prueba (0.992) indica que el modelo predice correctamente y no está sobreajustado, por lo que puede utilizarse con confianza para nuevos datos.
 
-Se construyó un modelo de regresión para predecir la cantidad de "likes" a partir de otras variables numéricas y categóricas, logrando un desempeño aceptable. Esto demuestra la posibilidad de estimar métricas clave antes de que un video alcance su punto máximo de difusión.
+La preparación y limpieza del dataset, junto con la creación de variables derivadas como like_ratio y comment_ratio, fueron factores clave para mejorar la capacidad predictiva del modelo.
 
-Durante el proyecto se experimentaron varios desafíos, como la alta proporción de valores faltantes en columnas temporales (trending_date, days_to_trending) y la presencia de registros duplicados. Estas dificultades fueron superadas gracias a un enfoque iterativo de limpieza, revisión de decisiones y aplicación disciplinada de la metodología CRISP-DM.
+La visualización de los datos y el análisis exploratorio fueron fundamentales para entender el comportamiento de las variables y justificar el uso del modelo elegido.
 
-El trabajo interdisciplinario y la especialización de roles (Data Engineer, Data Scientist, Data Analyst y Líder de Proyecto) permitió abordar cada etapa del proceso con profundidad. Se comprobó que la preparación de datos es una fase crítica que impacta directamente en la calidad de los modelos y visualizaciones generadas.
 
 ---
 
