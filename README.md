@@ -48,7 +48,7 @@ Los datos utilizados, son una versión modificada para el proyecto, tienen como 
 - Variables categóricas (`category_id`, `category_name`)
 - Indicadores de estado (`comments_disabled`, `ratings_disabled`, etc.)
 
-[Ver diccionario de datos (PDF)]([./data/Diccionario%20de%20Datos.pdf](https://drive.google.com/file/d/17IOv-ro_FJoIT1z-Hwr4jr3Wll7xI3XH/view?usp=sharing))
+[Ver diccionario de datos (PDF)](../data/Diccionario de Datos.pdf)
 
 ## 4. Conclusiones
 
